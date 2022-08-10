@@ -19,7 +19,7 @@ $num = $result->rowCount();
 // check if any post
 if ($num > 0) {
     // init array
-    $posts_arr = array();
+
 //    $posts_arr['data'] = array();
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
@@ -32,10 +32,10 @@ if ($num > 0) {
             'category_id' => $category_id,
             'category' => $category_name
         );
-
-        $posts_arr[] = $post_item;
+         ;
+//        = $post_item;
         // Turn to json
-        echo json_encode($posts_arr);
+        echo json_encode($post_item);
     }
 
 } else {
