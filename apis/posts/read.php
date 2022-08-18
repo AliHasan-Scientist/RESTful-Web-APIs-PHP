@@ -22,21 +22,25 @@ if ($num > 0) {
 
 //    $posts_arr['data'] = array();
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-        extract($row);
+        // extract($row);
 
-        $post_item = array(
-            'id' => $id,
-            'title' => $title,
-            'body' => htmlentities($title),
-            'author' => $author,
-            'category_id' => $category_id,
-            'category' => $category_name
-        );
-         ;
+        // $post_item = array(
+        //     'id' => $id,
+        //     'title' => $title,
+        //     'body' => htmlentities($title),
+        //     'author' => $author,
+        //     'category_id' => $category_id,
+        //     'category' => $category_name
+        // );
+        $post_item[]=$row;
+         
 //        = $post_item;
         // Turn to json
-        echo json_encode($post_item);
+
     }
+    echo json_encode($post_item);
+
+
 
 } else {
     //
