@@ -99,7 +99,7 @@ class Post
   public function update()
   {
     // Create query
-    $query = 'UPDATE ' . $this->table . '
+    $query = 'UPDATE' . $this->table . '
                           SET title = :title, body = :body, author = :author, category_id = :category_id
                           WHERE id = :id';
 
