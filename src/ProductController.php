@@ -1,4 +1,5 @@
 <?php
+include_once('./config/Database.php');
 class ProductController
 {
     public function processRequest(string $method, ?string $id): void
@@ -20,7 +21,7 @@ class ProductController
     {
         switch ($method) {
             case 'GET':
-                echo json_encode(array('id' => '1', 'name' => 'Roy Ali Hasan'));
+                echo json_encode(array('id'=>'1'));
                 break;
         }
     }
